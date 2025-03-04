@@ -5,9 +5,9 @@
  * Use tables film and language, and order the results alphabetically by film title.
  */
 
-SELECT f.title, f.film_id, f.language_id, l.name
+SELECT f.film_id, f.title, f.language_id, l.name
 FROM film f
 JOIN language l ON f.language_id = l.language_id
-WHERE (f.title ILIKE 'K%' OR f.title ILIKE 'Q%')
-AND l.name = 'English'
-ORDER BY f.title ASC;
+WHERE (f.title LIKE 'K%' OR f.title LIKE 'Q%')
+  AND l.name = 'English'
+ORDER BY f.title;
