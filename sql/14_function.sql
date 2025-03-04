@@ -3,7 +3,7 @@
  * Use table category, film_category, and film.
  */
 
-CREATE OR REPLACE FUNCTION list_category(TEXT) RETURNS TABLE(title TEXT) AS
+CREATE OR REPLACE FUNCTION list_category(category_name TEXT) RETURNS TABLE(title TEXT) AS
 $$
 SELECT f.title
 FROM film f
